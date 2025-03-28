@@ -1,15 +1,24 @@
-# Node.js Kubernetes Demo
+# Node.js Kubernetes Demo with Autoscaling & Rolling Deployments
 
-This is a simple Node.js application configured to run on Kubernetes with autoscaling.
+![Kubernetes](https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
-## Prerequisites
+A production-ready Node.js application deployed on Kubernetes with:
+- Horizontal Pod Autoscaling (HPA)
+- Rolling updates and rollbacks
+- Multi-node deployment
+- Self-healing capabilities
 
-- Docker
-- Kubernetes cluster with 2 nodes
-- kubectl configured to access your cluster
+## 📋 Prerequisites
 
-## Build and Deploy
+- Docker Desktop ([Install](https://www.docker.com/products/docker-desktop))
+- Minikube ([Install](https://minikube.sigs.k8s.io/docs/start/))
+- kubectl ([Install](https://kubernetes.io/docs/tasks/tools/))
+- 4GB+ RAM allocated to Minikube
 
-1. Build Docker image:
-   ```bash
-   docker build -t your-docker-username/nodejs-kubernetes-demo:latest ./app
+## 🚀 Quick Start
+
+### 1. Build and Push Docker Image
+```bash
+docker build -t your-username/nodejs-kubernetes-demo:latest ./app
+docker push your-username/nodejs-kubernetes-demo:latest
